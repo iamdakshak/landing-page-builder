@@ -13,7 +13,6 @@ const EditWebsitePage = () => {
     state?.landingPage?.find((page) => page?.id === Number(id))
   );
 
-  const { title, description, imageUrl } = currentPage;
   const [formData, setFormData] = useState(currentPage);
   const dispatch = useDispatch();
 
