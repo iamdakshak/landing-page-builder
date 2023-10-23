@@ -1,0 +1,33 @@
+.mainContainer {
+  padding: 0 1rem;
+  height: calc(100vh - 150px);
+}
+
+.mainContainer .contentWrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.contentWrapper .container {
+  display: flex;
+  flex-direction: row;
+  /* height: 100%; */
+  column-gap: 24px;
+}
+.contentWrapper .container .textContainer {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  row-gap: 24px;
+}
+
+.textContainer .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.textContainer .description {
+}

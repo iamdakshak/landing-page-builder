@@ -1,0 +1,50 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  background-color: aliceblue;
+  cursor: pointer;
+  position: relative;
+}
+.cardContainer a {
+  text-decoration: none;
+  /* padding: 0 8px; */
+}
+.cardContainer .moreMenu {
+  position: absolute;
+  font-size: 30px;
+  right: 0;
+}
+.cardContainer .wrapper .textContent {
+  padding: 4px 6px;
+  color: #fff;
+  background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+  border-radius: 0 0 4px 4px;
+}
+
+.cardContainer .wrapper .title {
+  font-size: 15px;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-bottom: 5px;
+}
+
+.cardContainer .wrapper .textContent .description {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  column-gap: 16px;
+  row-gap: 16px;
+}
