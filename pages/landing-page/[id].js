@@ -17,7 +17,7 @@ const LandingPage = (props) => {
   const currentPage = useSelector((state) =>
     state?.landingPage?.find((page) => page?.id === Number(id))
   );
-  const { title = "", description = "", imageUrl = "" } = currentPage;
+  const { title = "", description = "", imageUrl = "" } = currentPage || {};
 
   const imageStyle = {
     objectFit: "cover",
