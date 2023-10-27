@@ -43,7 +43,14 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>Home Page</h1>
+      <div className={styles.headerTitle}>
+        <h1>Home Page</h1>
+        <div className={styles.addButtonWrapper}>
+          <Link href="/create">
+            <div className={styles.addButton}>+ Add</div>
+          </Link>
+        </div>
+      </div>
       <div className={styles.cardsWrapper}>
         {landingPages.map((landingPage) => (
           <div key={landingPage.id} className={styles.cardContainer}>
@@ -56,15 +63,15 @@ const Dashboard = () => {
               }}
             >
               <Icon icon="majesticons:more-menu-vertical-line" />
+              {selectedSlot === landingPage?.id && expandMenu ? (
+                <>
+                  <ExpandMenu
+                    data={expandMenuItems}
+                    clickFn={(opt, id) => handleMenuClick(opt, id)}
+                  />
+                </>
+              ) : null}
             </div>
-            {selectedSlot === landingPage?.id && expandMenu ? (
-              <>
-                <ExpandMenu
-                  data={expandMenuItems}
-                  clickFn={(opt, id) => handleMenuClick(opt, id)}
-                />
-              </>
-            ) : null}
             <Link href={`/landing-page/${landingPage?.id}`}>
               <div className={styles.wrapper}>
                 <div className={styles.imageWrapper}>
@@ -87,9 +94,6 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
-      <Link href="/create">
-        <div className="add-button">+ Add</div>
-      </Link>
     </div>
   );
 };
