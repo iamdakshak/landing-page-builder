@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   max-width: 25%;
+  width: min-content;
   background-color: aliceblue;
   cursor: pointer;
   position: relative;
 }
 .cardContainer a {
   text-decoration: none;
+  height: 100%;
   /* padding: 0 8px; */
 }
 .cardContainer .moreMenu {
@@ -15,7 +17,19 @@
   font-size: 30px;
   right: 0;
 }
+.cardContainer .moreMenu svg:hover {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgb(153, 204, 243);
+}
+.cardContainer .wrapper {
+  height: inherit;
+}
+.cardContainer .wrapper .imageWrapper {
+  height: min-content;
+}
 .cardContainer .wrapper .textContent {
+  height: 32%;
   padding: 4px 6px;
   color: #fff;
   background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
@@ -47,4 +61,27 @@
   padding: 0 2rem;
   column-gap: 16px;
   row-gap: 16px;
+}
+
+.headerTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.addButtonWrapper .addButton {
+  text-decoration: none;
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 6px;
+  cursor: pointer;
 }
